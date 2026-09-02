@@ -34,7 +34,6 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  /* Subtle noise texture for warmth */
   body::before {
     content: "";
     position: fixed; inset: 0;
@@ -52,7 +51,7 @@
     padding: 0 32px;
   }
 
-  /* ─── Side nav ──────────────────────────────────── */
+  /* Side nav */
   .side-nav {
     position: fixed;
     top: 50%;
@@ -95,7 +94,7 @@
   .side-nav a.is-active span { opacity: 1; }
   @media (max-width: 780px) { .side-nav { display: none; } }
 
-  /* ─── Top header ───────────────────────────────── */
+  /* Top header */
   header.top {
     display: flex;
     justify-content: space-between;
@@ -118,7 +117,7 @@
     50% { opacity: 0.3; }
   }
 
-  /* ─── Hero ─────────────────────────────────────── */
+  /* Hero */
   .hero {
     padding: 120px 0 140px;
     position: relative;
@@ -185,7 +184,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ─── Section headings ─────────────────────────── */
+  /* Section headings */
   section { padding: 80px 0; }
   .sec-head {
     display: flex;
@@ -208,7 +207,7 @@
     letter-spacing: -0.01em;
   }
 
-  /* ─── About ────────────────────────────────────── */
+  /* About */
   #about .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -236,7 +235,7 @@
     #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 
-  /* ─── Projects ─────────────────────────────────── */
+  /* Projects */
   .project {
     display: grid;
     grid-template-columns: 80px 1fr auto;
@@ -260,9 +259,20 @@
     font-weight: 400;
     font-size: 26px;
     letter-spacing: -0.01em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     transition: color 0.25s ease;
   }
+  .project .live-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px dotted var(--accent);
+    padding-bottom: 1px;
+  }
+  .project .live-link:hover { border-bottom-style: solid; }
   .project .desc {
     color: var(--ink-2);
     font-size: 15px;
@@ -296,7 +306,7 @@
     .project .arrow { display: none; }
   }
 
-  /* ─── Skills ───────────────────────────────────── */
+  /* Skills */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -334,7 +344,7 @@
     .skills-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 
-  /* ─── Contact ──────────────────────────────────── */
+  /* Contact */
   #contact { padding: 100px 0 140px; }
   #contact .big {
     font-family: var(--display);
@@ -369,7 +379,7 @@
   }
   .contact-list .arr { font-size: 16px; }
 
-  /* ─── Footer ───────────────────────────────────── */
+  /* Footer */
   footer {
     padding: 40px 0 48px;
     border-top: 1px solid var(--line);
@@ -391,7 +401,6 @@
 </head>
 <body>
 
-<!-- Side nav -->
 <nav class="side-nav" aria-label="Section navigation">
   <a href="#top" class="is-active"><span>Top</span></a>
   <a href="#about"><span>About</span></a>
@@ -412,7 +421,7 @@
     <section class="hero" aria-label="Introduction">
       <div class="eyebrow">Keegan Tu · Software Engineer</div>
       <h1>Full-stack projects that touch <em>real data</em>, from APIs to databases.</h1>
-      <p class="lead">Computer Science student at Rutgers University, graduating May 2026. I build things end-to-end — caching layers, relational schemas, async APIs — and I like shipping them.</p>
+      <p class="lead">Computer Science graduate from Rutgers University, class of May 2026. I build things end-to-end — auth systems, caching layers, relational schemas, async APIs — and I like shipping them.</p>
       <div class="cta-row">
         <a href="#work" class="btn primary">See my work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -429,16 +438,16 @@
       </div>
       <div class="about-grid">
         <div class="meta">
-          <div><span class="k">Studying</span><span>CS at Rutgers</span></div>
-          <div><span class="k">Year</span><span>Senior, class of '26</span></div>
-          <div><span class="k">GPA</span><span>3.2</span></div>
+          <div><span class="k">Studied</span><span>CS at Rutgers</span></div>
+          <div><span class="k">Grad</span><span>May 2026</span></div>
+          <div><span class="k">GPA</span><span>3.3</span></div>
           <div><span class="k">Based</span><span>Wall, New Jersey</span></div>
           <div><span class="k">Open to</span><span>SWE · Full-stack · Backend</span></div>
         </div>
         <div class="prose">
-          <p>I'm a senior CS student at Rutgers wrapping up my degree in May 2026. My coursework has taken me through database systems, data science, algorithms, and numerical analysis — but I learn best by building.</p>
-          <p>Outside of class I've been shipping full-stack projects that pull in real data from public APIs: financial markets, sports betting lines, job applications. I care about the plumbing — caching, schema design, async I/O — as much as what users see on the screen.</p>
-          <p>I've also worked part-time in retail sales since 2023, which has given me more comfort talking to strangers than most people expect from a CS major.</p>
+          <p>I'm a recent CS grad from Rutgers (May 2026). My coursework covered database systems, data science, algorithms, and numerical analysis, but I learn best by building.</p>
+          <p>Outside of class I've been shipping full-stack projects that pull in real data from public APIs: financial markets, sports betting lines, fitness tracking. I care about the plumbing — auth, caching, schema design, async I/O — as much as what users see on the screen.</p>
+          <p>I also worked part-time in retail at Quiksilver from March 2021 to May 2025, which gave me more comfort talking to strangers than most people expect from a CS major.</p>
         </div>
       </div>
     </section>
@@ -450,11 +459,43 @@
         <h2>Selected work</h2>
       </div>
 
+      <a class="project" href="https://workout-track.up.railway.app/" target="_blank" rel="noopener">
+        <div class="year">2026</div>
+        <div>
+          <div class="proj-title">Workout Tracker</div>
+          <span class="live-link">workout-track.up.railway.app ↗</span>
+          <p class="desc">Full-stack fitness tracker with JWT auth, workout logging, and progress analytics. Designed a normalized Postgres schema and wrote raw SQL for everything, including window functions for volume trends and RANK() over user totals for a leaderboard. Deployed on Railway with a managed Postgres instance.</p>
+          <div class="tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">JWT</span>
+            <span class="tag">Railway</span>
+          </div>
+        </div>
+        <div class="arrow">↗</div>
+      </a>
+
+      <a class="project" href="https://github.com/keegantu" target="_blank" rel="noopener">
+        <div class="year">2026</div>
+        <div>
+          <div class="proj-title">NLP-to-SQL Query System</div>
+          <p class="desc">Connected a locally hosted 3B parameter language model to a live PostgreSQL database of HMDA mortgage data, translating natural language into safe SQL queries. Handled SSH tunneling, credential management, and query safety to prevent injection and destructive statements from generated SQL.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Qwen2.5-3B</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SSH</span>
+          </div>
+        </div>
+        <div class="arrow">↗</div>
+      </a>
+
       <a class="project" href="https://github.com/keegantu" target="_blank" rel="noopener">
         <div class="year">2025</div>
         <div>
           <div class="proj-title">Stock Market Aggregator</div>
-          <p class="desc">Full-stack web app aggregating real-time stock data and financial news from multiple APIs. Redis caching layer cut response time by 90% while respecting upstream rate limits. Async HTTP with httpx for concurrent API calls.</p>
+          <p class="desc">Async API aggregating live stock data and financial news from Alpha Vantage and News API. Redis caching layer with TTL-based expiration cut response time on repeat queries and kept me inside upstream rate limits. Used httpx to fan out concurrent requests across multiple external APIs from a single endpoint.</p>
           <div class="tags">
             <span class="tag">FastAPI</span>
             <span class="tag">React</span>
@@ -466,31 +507,17 @@
         <div class="arrow">↗</div>
       </a>
 
-      <a class="project" href="https://github.com/keegantu" target="_blank" rel="noopener">
+      <a class="project" href="https://nba-odds.up.railway.app/" target="_blank" rel="noopener">
         <div class="year">2025</div>
         <div>
           <div class="proj-title">NBA Odds Tracker</div>
-          <p class="desc">Sports betting odds aggregator pulling from The Odds API into a normalized PostgreSQL schema. Built a transform pipeline (decimal → American odds, UTC → EST) and an automated refresh with clean reinsertion to avoid duplicates.</p>
+          <span class="live-link">nba-odds.up.railway.app ↗</span>
+          <p class="desc">Idempotent data pipeline pulling live NBA betting odds into a normalized PostgreSQL schema without duplication across repeated runs. Built transform logic to convert decimal to American odds and UTC to EST, with clean reinsertion on refresh.</p>
           <div class="tags">
-            <span class="tag">Flask</span>
-            <span class="tag">PostgreSQL</span>
             <span class="tag">Python</span>
-            <span class="tag">The Odds API</span>
-          </div>
-        </div>
-        <div class="arrow">↗</div>
-      </a>
-
-      <a class="project" href="https://github.com/keegantu" target="_blank" rel="noopener">
-        <div class="year">2024</div>
-        <div>
-          <div class="proj-title">Job Application Tracker</div>
-          <p class="desc">Full-stack CRUD app for tracking applications and interview stages. Normalized 11-field relational schema, psycopg2 transactions, Jinja2 templates with sort and filter on the frontend. My daily driver through recruiting season.</p>
-          <div class="tags">
-            <span class="tag">Flask</span>
             <span class="tag">PostgreSQL</span>
-            <span class="tag">Jinja2</span>
-            <span class="tag">psycopg2</span>
+            <span class="tag">The Odds API</span>
+            <span class="tag">Railway</span>
           </div>
         </div>
         <div class="arrow">↗</div>
@@ -508,23 +535,33 @@
           <h3>Languages</h3>
           <ul>
             <li>Python <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span></span></li>
+            <li>SQL <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span></span></li>
             <li>Java <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d"></span></span></li>
             <li>JavaScript <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d"></span></span></li>
-            <li>SQL <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d"></span></span></li>
+            <li>TypeScript <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d"></span><span class="d"></span><span class="d"></span></span></li>
             <li>HTML / CSS <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d"></span></span></li>
-            <li>MATLAB <span class="dot-row"><span class="d on"></span><span class="d on"></span><span class="d on"></span><span class="d"></span><span class="d"></span></span></li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3>Frameworks &amp; libraries</h3>
+          <h3>Backend</h3>
           <ul>
             <li>FastAPI</li>
-            <li>Flask</li>
-            <li>React</li>
-            <li>pandas</li>
+            <li>REST API design</li>
+            <li>JWT authentication</li>
+            <li>Async programming</li>
+            <li>psycopg2</li>
             <li>httpx, requests</li>
-            <li>psycopg2, asyncio</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React</li>
+            <li>State management (hooks)</li>
+            <li>Fetch API</li>
+            <li>Responsive CSS</li>
           </ul>
         </div>
 
@@ -532,10 +569,10 @@
           <h3>Databases &amp; infra</h3>
           <ul>
             <li>PostgreSQL</li>
-            <li>Redis</li>
-            <li>RESTful API design</li>
-            <li>Database normalization</li>
-            <li>Caching strategies</li>
+            <li>Redis (caching, TTL)</li>
+            <li>SQL window functions &amp; CTEs</li>
+            <li>Schema normalization</li>
+            <li>Railway (deployment)</li>
           </ul>
         </div>
 
@@ -543,10 +580,10 @@
           <h3>Tools</h3>
           <ul>
             <li>Git &amp; GitHub</li>
+            <li>Linux &amp; Bash</li>
             <li>VS Code</li>
             <li>Postman</li>
-            <li>npm, pip, venv</li>
-            <li>Terminal</li>
+            <li>SSH</li>
           </ul>
         </div>
 
@@ -554,20 +591,10 @@
           <h3>Coursework</h3>
           <ul>
             <li>Database Systems</li>
+            <li>Data Structures</li>
+            <li>OOP (Java)</li>
             <li>Data Science</li>
-            <li>Software Engineering</li>
-            <li>Algorithms &amp; Complexity</li>
             <li>Numerical Analysis</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Concepts</h3>
-          <ul>
-            <li>Async programming</li>
-            <li>CRUD operations</li>
-            <li>Version control</li>
-            <li>Transaction management</li>
           </ul>
         </div>
       </div>
@@ -609,7 +636,6 @@
 </main>
 
 <script>
-  // Scroll-spy for side nav
   (function () {
     const links = document.querySelectorAll(".side-nav a");
     const targets = [...links].map(a => {
@@ -629,8 +655,6 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   })();
-
-  
 </script>
 
 </body>
